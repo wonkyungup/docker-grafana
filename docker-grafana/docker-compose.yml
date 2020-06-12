@@ -1,0 +1,15 @@
+version : '3'
+services:
+        server-grafana:
+                #                image : netsarang/monitoring-grafana
+                build:
+                        context: .
+                        dockerfile : Dockerfile
+                                
+                ports:
+                        - "3000:3000"
+
+                container_name:
+                         monitoring-grafana
+                command:
+                        /bin/bash -c "bin/grafana-server ; sleep infinity"
