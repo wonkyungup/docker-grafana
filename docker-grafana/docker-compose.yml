@@ -1,7 +1,6 @@
 version : '3'
 services:
         server-grafana:
-                #                image : netsarang/monitoring-grafana
                 build:
                         context: .
                         dockerfile : Dockerfile
